@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 const { getGroqChatCompletion } = require('./groqClient');
-const { formatRecipeResponse } = require('./utils/recipeFormatter');
+const { formatRecipeResponse } = require('./recipeFormatter');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -86,3 +86,4 @@ Formatting:
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
+
